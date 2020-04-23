@@ -30,7 +30,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 /* We start writing out flexbox here. The above is just page setup */
 .container {
-  display:flex;
+  display:flex; /* flex will go all the way across*/
+    /* inline-flex: only takes the width that it needs*/
   border:10px solid goldenrod;
-  height:100vh;
+  height:100vh; /* vh: viewport height (100%) */
 }
