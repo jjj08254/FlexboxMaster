@@ -19,12 +19,12 @@
       <nav class="flex-nav">
         <a href="#" class="toggleNav">Menu</a>
         <ul>
-          <li><a href="#">Item 01</a></li>
-          <li><a href="#">Item 02</a></li>
-          <li><a href="#">Item 03</a></li>
-          <li><a href="#">Item 04</a></li>
-          <li><a href="#">Item 05</a></li>
-          <li><a href="#">Item 06</a></li>
+          <li class="li1"><a href="#">Item 01</a></li>
+          <li class="li2"><a href="#">Item 02</a></li>
+          <li class="li3"><a href="#">Item 03</a></li>
+          <li class="li4"><a href="#">Item 04</a></li>
+          <li class="li5"><a href="#">Item 05</a></li>
+          <li class="li6"><a href="#">Item 06</a></li>
           <li class="social">
             <a href="http://twitter.com/wesbos"
               ><i class="fa fa-twitter"></i
@@ -51,7 +51,7 @@
       </section>
 
       <section class="details">
-        <p>JOJO is king of javascript</p>
+        <p>JOJO is the king of javascript</p>
         <p>Just Kidding</p>
       </section>
 
@@ -68,13 +68,27 @@
       </footer>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
       $(function () {
         $(".toggleNav").on("click", function () {
           $(".flex-nav ul").toggleClass("open");
         });
       });
+    </script> -->
+    <script>
+      const toggleMenu = document.querySelector(".toggleNav");
+
+      function toggleMenuUpdate() {
+        const ul = document.querySelector(".flex-nav ul");
+        // ul.classList.toggle("open");
+        // setTimeout(() => {
+        //   ul.classList.toggle("active");
+        // }, 150);
+        ul.classList.toggle("open");
+      }
+
+      toggleMenu.addEventListener("click", toggleMenuUpdate);
     </script>
   </body>
 </html>
