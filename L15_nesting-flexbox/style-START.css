@@ -3,7 +3,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -16,28 +18,55 @@ body {
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
-  padding:50px;
+  padding: 50px;
 }
 
 img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 a {
-  color:white;
+  color: white;
   text-decoration: none;
   font-size: 15px;
-  background:rgba(0,0,0,0.2);
-  padding:20px 5px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 5px;
 }
 a:hover {
-  background:rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
-
+/* first flex container */
 .slider-nav ul {
   list-style: none;
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  display: flex;
 }
 
+/* first flex items */
+.slider-nav li {
+  flex: 2;
+  text-align: center;
+  /* This is the second flex container as well */
+  display: flex;
+}
+
+.arrow a {
+  font-size: 40px;
+}
+
+/* .sliser-nav li:first-child, :last-child */
+.slider-nav .arrow {
+  flex: 1;
+}
+
+/* second flex items */
+.slider-nav a {
+  flex: 1;
+  /* This is the third flex container as well */
+  /* we want to stretch as well and center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
